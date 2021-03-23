@@ -10,12 +10,12 @@ import { VBtn } from "vuetify/lib";
 @Component({
   name: "VButton",
   components: {
-    VBtn
+    VBtn,
   }
 })
 export default class VButton extends Vue {
   onClick() {
-    this.$emit('onClick');
+    this.$emit("onClick");
   }
 }
 </script>
