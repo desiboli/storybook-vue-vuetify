@@ -11,7 +11,7 @@ import { VBtn } from "vuetify/lib";
   name: "VButton",
   components: {
     VBtn,
-  }
+  },
 })
 export default class VButton extends Vue {
   onClick() {
