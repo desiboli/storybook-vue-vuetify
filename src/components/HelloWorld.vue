@@ -13,6 +13,8 @@
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">Welcome to Vuetify</h1>
 
+        <VButton />
+
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br />please join our online
@@ -75,10 +77,11 @@
 
 <script lang="ts">
 import Vue from "vue";
+import VButton from "@/stories/VButton.vue"
 
 export default Vue.extend({
   name: "HelloWorld",
-
+  components: { VButton },
   data: () => ({
     ecosystem: [
       {
