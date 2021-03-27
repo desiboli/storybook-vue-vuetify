@@ -13,7 +13,7 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     // Use Sass loader for vuetify components
     config.module.rules.push({
-      test: /\.s[ac]ss$/i,
+      test: /\.sass$/,
       use: [
         'style-loader',
         'vue-style-loader',
@@ -24,6 +24,23 @@ module.exports = {
           options: {
             // This is the path to your variables
             additionalData: `@import '@/styles/variables.scss'`
+          },
+        },
+      ],
+      include: path.resolve(__dirname, '../'),
+    });
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'vue-style-loader',
+        'css-loader',
+        {
+          loader: 'sass-loader',
+          // Requires sass-loader@^9.0.0
+          options: {
+            // This is the path to your variables
+            additionalData: `@import '@/styles/variables.scss';`
           },
         },
       ],
