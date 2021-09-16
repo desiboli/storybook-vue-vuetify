@@ -13,5 +13,5 @@ const Template = (args, { argTypes }) => ({
   template: '<VButton @onClick="onClick" v-bind="$props" />',
 });
 
-export const VuetifyButton = Template.bind({});
-VuetifyButton.args = {};
+export const Button = Template.bind({});
+Button.args = {};

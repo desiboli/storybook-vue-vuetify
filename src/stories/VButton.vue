@@ -1,6 +1,6 @@
 <template>
-  <v-btn color="primary" @click="onClick">
-    <v-icon>mdi-lock</v-icon>
+  <v-btn color="primary" @click="onClick" rounded>
+    <v-icon class="mr-2">mdi-star</v-icon>
     vuetify button
   </v-btn>
 </template>
@@ -18,7 +18,7 @@ import { VBtn, VIcon } from "vuetify/lib";
   },
 })
 export default class VButton extends Vue {
-  onClick() {
+  onClick(): void {
     this.$emit("onClick");
   }
 }
@@ -27,6 +27,6 @@ export default class VButton extends Vue {
 <style lang="scss" scoped>
 // Just an example to show that the deep selector works!
 ::v-deep.v-btn:not(.v-btn--round).v-size--default {
-  height: 80px;
+  height: 48px;
 }
 </style>
